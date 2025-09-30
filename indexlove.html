@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>love</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+        }
+
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: #ff0000;
+            transform: rotate(-45deg);
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #ff0000;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 50px;
+            top: 0;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: rotate(-45deg) scale(1);
+            }
+            20% {
+                transform: rotate(-45deg) scale(1.2);
+            }
+            40% {
+                transform: rotate(-45deg) scale(1);
+            }
+            60% {
+                transform: rotate(-45deg) scale(1.2);
+            }
+            100% {
+                transform: rotate(-45deg) scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heart"></div>
+   
+</body>
+
+</html>
